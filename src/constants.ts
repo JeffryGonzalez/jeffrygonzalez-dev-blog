@@ -1,38 +1,34 @@
 import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
-import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import IconBsky from "@/assets/icons/IconBsky2.svg";
 import { SITE } from "@/config";
 
 export const SOCIALS = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/jeffrygonzalez",
     linkTitle: ` ${SITE.title} on Github`,
     icon: IconGitHub,
   },
-  {
-    name: "X",
-    href: "https://x.com/username",
-    linkTitle: `${SITE.title} on X`,
-    icon: IconBrandX,
+   {
+    name: "Github",
+    href: "https://github.com/hypertheorytraining",
+    linkTitle: ` ${SITE.title} on Github`,
+    icon: IconGitHub,
   },
+ 
   {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/username/",
+    name: "BlueSky",
+    href: "https://bsky.app/profile/jeffrygonzalez.dev",
     linkTitle: `${SITE.title} on LinkedIn`,
-    icon: IconLinkedin,
+    icon: IconBsky,
   },
-  {
-    name: "Mail",
-    href: "mailto:yourmail@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    icon: IconMail,
-  },
+
 ] as const;
 
 export const SHARE_LINKS = [
