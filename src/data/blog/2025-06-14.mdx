@@ -1,0 +1,46 @@
+---
+title: Using Dan Abramov Using AI To Solve My Problems
+author: Jeffry Gonzalez
+pubDatetime: 2025-06-14
+featured: false
+draft: false
+tags:
+  - AI
+  - Astro
+slug: using-ai-via-dan
+description: "Fixing a problem I've had"
+---
+
+import SvgImage from '../../components/SvgImage.astro'; 
+
+This might not seem like much, but the image below is a *single* SVG file.
+
+If you toggle this site from light to dark mode, the SVG will change colors automatically.
+
+I've done a bazillion of these things where I have to keep two versions of the same SVG, one for light mode and one for dark mode.
+
+I use [Excalidraw](https://excalidraw.com/) to create my SVGs, and I can just export them as a single SVG file.
+
+
+<SvgImage
+  src="/sample.svg"
+  alt="Demo"
+  width="300"
+  height="300" />
+
+  I saw this post from the great [Dan Abramov](https://twitter.com/dan_abramov/status/1668708859306269696). It's worth reading. He's trying to 
+  use AI code assistants to solve some problems, and the one he describes here is how he used it to fix his SVGs so that he only has to maintain one version of the SVG, and it will change colors automatically when the site toggles between light and dark mode.
+
+  He did a much more involved solution than I did, but mine works, at least in [Astro](https://astro.build/) which I use for a lot of things, including this blog.
+
+Here's the component I created (`SvgImage.astro`) to handle the SVGs:
+
+```astro 
+---
+const { src, alt = '', width, height, class: className = '' } = Astro.props;
+---
+
+<div class="dark:hue-rotate-180 dark:invert-180">
+  <img src={src} alt={alt} width={width} height={height} class={className} />
+</div>
+```
