@@ -1,7 +1,7 @@
 ---
 title: "Scope is a Composition Decision"
 author: Jeff Gonzalez
-pubDatetime: 2026-05-01
+pubDatetime: 2026-05-01T15:51:39.635Z
 featured: false
 draft: false
 tags:
